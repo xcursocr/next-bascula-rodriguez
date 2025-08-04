@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Oswald:wght@200..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0000ff;
+  --color-secondary: #ea47b4;
+  --color-background: #ffffff;
+  --color-foreground: #191919;
+  --animate-fade-in-scale: fade-in-scale 0.3s ease-in-out;
+  --animate-fade-in: fade-in 0.3s ease-in-out;
+  @keyframes fade-in-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  --font-Delius: "Delius", cursive;
+  --font-Oswald: "Oswald", "sans-serif";
+  --font-Ephesis: "Ephesis", cursive;
+}
+
+[data-theme="dark"] {
+  --color-primary: #6565ff;
+  --color-secondary: #ef75c6;
+  --color-background: #191919;
+  --color-foreground: #ffffff;
+}
+
+[data-theme="green"] {
+  --color-primary: #1ead66;
+  --color-secondary: #19e5e5;
+  --color-background: #eef6f2;
+  --color-foreground: #1e2d26;
+}
+
+[data-theme="red"] {
+  --color-primary: #ea4747;
+  --color-secondary: #f47575;
+  --color-background: #fbf8f8;
+  --color-foreground: #3d2828;
+}
+
+[data-theme="gray"] {
+  --color-primary: #51657a;
+  --color-secondary: #8499ac;
+  --color-background: #eff2f4;
+  --color-foreground: #28323d;
+}
+
+[data-theme="rose"] {
+  --color-primary: #ea477d;
+  --color-secondary: #d82661;
+  --color-background: #fff4f8;
+  --color-foreground: #471e2c;
+}
+
+[data-theme="amber"] {
+  --color-primary: #ffc005;
+  --color-secondary: #ffed46;
+  --color-background: #fff8e5;
+  --color-foreground: #423823;
+}
+
+[data-theme="slate"] {
+  --color-primary: #374151;
+  --color-secondary: #8495ac;
+  --color-background: #e0e4ea;
+  --color-foreground: #20242b;
+}
+
+[data-theme="neon"] {
+  --color-primary: #00ff2a;
+  --color-secondary: #32baff;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+}
