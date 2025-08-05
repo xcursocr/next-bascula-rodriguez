@@ -52,9 +52,9 @@ export function Header() {
             />
           </div>
         </div>
+        <FixedMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+        <FixedSearchMobil isSearch={isSearch} setIsSearch={setIsSearch} />
       </div>
-      <FixedMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-      <FixedSearchMobil isSearch={isSearch} setIsSearch={setIsSearch} />
     </>
   );
 }

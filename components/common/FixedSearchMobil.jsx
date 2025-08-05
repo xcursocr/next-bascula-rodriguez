@@ -8,7 +8,7 @@ export function FixedSearchMobil({ isSearch, setIsSearch }) {
   return (
     <>
       {isSearch && (
-        <form ref={menuRef} className="px-3 py-2">
+        <form ref={menuRef} className="z-50 px-3 py-2">
           <div className="sm:hidden flex items-center px-3 py-1 border border-primary rounded-lg md:w-[250px] transition-all transition-discrete starting:transition-all starting:transition-discrete animate-fade-in starting:animate-fade-in duration-150 starting:duration-150 ease-in-out starting:ease-in-out">
             <input
               type="text"

@@ -2,7 +2,7 @@ import { SearchIcon } from "lucide-react";
 
 export function SearchMain() {
   return (
-    <form>
+    <form className="">
       <div className="hidden sm:flex items-center gap-5 px-5 md:py-1 lg:py-1.5 border border-primary rounded-lg w-full md:w-[350px] lg:w-[400px]">
         <input
           type="text"

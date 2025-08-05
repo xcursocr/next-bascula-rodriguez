@@ -17,9 +17,11 @@ export function LogoInline() {
         height={400}
         className="w-8"
       />
-      <div className="mx-3">
-        <h1 className="font-Oswald text-sm">Basculas Rodriguez</h1>
-        <h2 className="font-Ephesis font-semibold text-sm">
+      <div className="mx-1 sm:mx-3">
+        <h1 className="font-Oswald text-[10px] sm:text-sm">
+          Basculas Rodriguez
+        </h1>
+        <h2 className="font-Ephesis font-semibold text-[10px] sm:text-sm">
           Calidad que pesa...
         </h2>
       </div>
