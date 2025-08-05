@@ -38,6 +38,16 @@
       transform: rotate(0.2deg);
     }
   }
+  @keyframes float-out-top {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-20%);
+      opacity: 1;
+    }
+  }
 
   --font-Delius: "Delius", cursive;
   --font-Oswald: "Oswald", "sans-serif";
@@ -99,4 +109,8 @@
   --color-secondary: #32baff;
   --color-background: #000000;
   --color-foreground: #ffffff;
+}
+
+@utility animate-float-out-top {
+  animation: float-out-top 0.8s ease-out forwards;
 }
