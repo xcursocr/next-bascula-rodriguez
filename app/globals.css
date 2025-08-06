@@ -6,6 +6,7 @@
 @theme {
   --color-primary: #0f0f59;
   --color-secondary: #ea47b4;
+  /*  --color-secondary: #555555; */
   --color-background: #ffffff;
   --color-foreground: #191919;
   --animate-fade-in-scale: fade-in-scale 0.3s ease-in-out;
@@ -113,4 +114,7 @@
 
 @utility animate-float-out-top {
   animation: float-out-top 0.8s ease-out forwards;
+}
+@utility font-border {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 50);
 }

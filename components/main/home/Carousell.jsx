@@ -61,7 +61,7 @@ export function Carousell({ products }) {
               <div
                 className={`top-5 sm:left-6 left-3 md:static absolute p-4 md:w-md `}
               >
-                <div className="flex flex-col justify-between items-center gap-3 bg-background shadow-lg mx-auto p-2 w-56 sm:w-64 lg:w-full text-foreground">
+                <div className="flex flex-col justify-between items-center gap-3 bg-background shadow-lg mx-auto p-2 w-56 sm:w-64 lg:w-full h-full text-foreground">
                   <h2 className="font-Montserrat font-bold text-foreground text-md md:text-xl uppercase">
                     {s.name}
                   </h2>
