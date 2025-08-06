@@ -118,3 +118,19 @@
 @utility font-border {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 50);
 }
+@utility text-fluid {
+  font-size: min(10vw, 0.75rem);
+}
+
+/* 1rem 16px */
+@utility h1-fluid {
+  font-size: min(10vw, 1rem);
+}
+
+@utility custom-scroll {
+  @apply [&::-webkit-scrollbar]:w-2
+  [&::-webkit-scrollbar-track]:bg-gray-100
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500;
+}

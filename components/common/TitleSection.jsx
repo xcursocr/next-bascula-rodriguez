@@ -8,15 +8,15 @@ export function TitleSection({
   href = "#",
 }) {
   return (
-    <div className="flex flex-col px-3 md:px-10">
+    <div className="flex flex-col my-8 px-3 md:px-10">
       <div className="flex justify-start items-center gap-3">
         {icono && <MessageSquareWarning className="w-4 text-primary" />}
-        <h2 className="font-black text-primary/85 text-xs uppercase">
+        <h2 className="font-black text-primary/85 uppercase h1-fluid">
           ¡ {title} !
         </h2>
         <Link
           href={href}
-          className="text-secondary text-xs hover:underline cursor-pointer"
+          className="text-fluid text-secondary hover:underline cursor-pointer"
         >
           {titleBtn}
         </Link>

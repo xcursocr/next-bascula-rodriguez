@@ -3,6 +3,7 @@ import { Carousell } from "./Carousell";
 import { CardDescuentos } from "./CardDescuentos";
 import { TitleSection } from "@/components/common/TitleSection";
 import { CardProduct } from "./CardProduct";
+import { SliderDinamyc } from "@/components/common/SliderDinamyc";
 
 export function IndexHome() {
   return (
@@ -16,14 +17,17 @@ export function IndexHome() {
         <CardDescuentos />
       </div>
       <TitleSection title={"Descubre lo nuevo"} icono={true} />
-      <div className="gap-x-20 gap-y-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-3 md:px-10">
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
+      {/* ultimos 4 o 6 productos agregados */}
+      <div className="flex justify-center gap-2 mx-auto w-[250px] sm:w-[500px] md:w-5xl overflow-x-scroll custom-scroll">
+        {allProducts.map((prod) => (
+          <CardProduct key={prod.id} product={prod} />
+        ))}
       </div>
-      <div>
+      {/* marcas */}
+      <div className="bg-background shadow-xl mx-auto my-8 p-3 md:px-10 border-1 border-foreground/5 max-w-5xl overflow-hidden">
+        <SliderDinamyc />
+      </div>
+      <div className="my-20">
         <h1>Home page</h1>
         <h1>Home page</h1>
         <h1>Home page</h1>
