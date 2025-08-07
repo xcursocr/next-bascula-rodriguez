@@ -7,7 +7,7 @@ import Link from "next/link";
 export function CardService() {
   return (
     <div className="group bg-foreground/2 border border-foreground/10 hover:border-primary w-full group:transition-colors group:transition-discrete group:duration-150 group:ease-in-out">
-      <div className="flex justify-between p-4">
+      <div className="flex flex-row justify-between items-center p-4">
         <div className="w-[40%]">
           <Link href={"/cateories/slug-category"}>
             <Image

@@ -57,13 +57,12 @@ export function IndexHome() {
         </div>
       </div>
       {/* hero bg-foreground/95*/}
-      <div className="relative">
-        <div className="z-10 absolute bg-[url(https://picsum.photos/id/112/1200/400)] bg-cover bg-no-repeat bg-center opacity-60 w-full h-[400px]">
-          <div className="px-20 py-10 text-background">
-            <CardHero />
-          </div>
+      <div className="relative h-[350px]">
+        <div className="z-10 absolute bg-foreground w-full h-[400px]"></div>
+        <div className="z-20 absolute bg-[url(https://picsum.photos/id/112/1200/400)] bg-cover bg-no-repeat bg-center opacity-30 w-full h-[400px]"></div>
+        <div className="z-30 absolute py-8 w-full h-[400px] text-background">
+          <CardHero className={"fill-background w-32 h-32"} />
         </div>
-        <div class="absolute bg-black w-full h-[400px]"></div>
       </div>
       <div className="my-20">
         <h1>Home page</h1>
