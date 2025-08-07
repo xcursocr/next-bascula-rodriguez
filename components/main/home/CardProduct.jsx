@@ -10,7 +10,7 @@ import { capitalizeFirstLetter, truncateText } from "@/utils/strFuntions";
 import Link from "next/link";
 
 export function CardProduct({ product, width = "250px" }) {
-  console.log(product);
+  // console.log(product);
   return (
     <div
       className={`group  animate-fade-in flex flex-col justify-between hover:shadow-2xl border border-foreground/10  w-[${width}] transition-all transition-discrete duration-300 ease-in-out cursor-pointer`}
