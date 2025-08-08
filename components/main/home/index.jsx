@@ -8,6 +8,7 @@ import { CardCategory } from "./CardCategory";
 import { TitleSectionV2 } from "@/components/common/TitleSectionV2";
 import { CardService } from "./CardService";
 import { CardHero } from "./CardHero";
+import { FormContact } from "./FormContact";
 
 export function IndexHome() {
   return (
@@ -46,16 +47,13 @@ export function IndexHome() {
         </div>
       </div>
       {/* servicios */}
-      <div className="bg-background px-20 py-10">
+
+      <div className="mb-4 px-3 md:px-10">
         <TitleSectionV2 title="Servicio y asistencia" />
-        <div className="px-3 md:px-10">
-          <div className="flex flex-col justify-start items-center gap-4">
-            {Array(
-              [1, 2, 3, 4].map((item, index) => <CardService key={index} />)
-            )}
-          </div>
-        </div>
+        {Array([1, 2, 3, 4].map((item, index) => <CardService key={index} />))}
       </div>
+
+      <div className="my-10"></div>
       {/* hero bg-foreground/95*/}
       <div className="relative h-[350px]">
         <div className="z-10 absolute bg-foreground w-full h-[400px]"></div>
@@ -64,82 +62,10 @@ export function IndexHome() {
           <CardHero className={"fill-background w-32 h-32"} />
         </div>
       </div>
-      <div className="my-20">
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
-        <h1>Home page</h1>
+      <div className="my-10"></div>
+      {/* form contact */}
+      <div className="bg-foreground/5 px-3 md:px-10 py-10">
+        <FormContact />
       </div>
     </section>
   );

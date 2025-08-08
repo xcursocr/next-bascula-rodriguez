@@ -1,5 +1,12 @@
 "use client";
-import { Menu, Search, User2 } from "lucide-react";
+import {
+  CircleChevronDown,
+  CircleChevronUp,
+  Menu,
+  MenuSquare,
+  Search,
+  User2,
+} from "lucide-react";
 import { SearchMain } from "../main/home/SearchMain";
 import { ThemeSelect } from "@/context/SelectTheme";
 import { FixedMenu } from "./FixedMenu";
@@ -8,7 +15,7 @@ import { FixedSearchMobil } from "./FixedSearchMobil";
 import { LogoInline } from "../ui/LogoInline";
 import useScrollPosition from "@/hooks/ScrollAction";
 
-export function Header() {
+export function HeaderNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
 
@@ -27,9 +34,29 @@ export function Header() {
           className={` flex justify-between items-center shadow-sm px-3 md:px-10 py-2 transition-all transition-discrete duration-150 animate-fade-in-scale`}
         >
           {/* logo inline*/}
-          <div className="">
+          <div className="flex items-center gap-2">
             <LogoInline />
+            <div className="hidden sm:block">
+              <div
+                className="flex items-center gap-2 text-primary hover:text-secondary hover:scale-105 transition-all duration-150 hover:cursor-pointer"
+                onClick={() => {
+                  setIsOpen((prev) => !prev);
+                }}
+              >
+                {isOpen ? (
+                  <CircleChevronUp className="w-4" />
+                ) : (
+                  <CircleChevronDown className="w-4" />
+                )}
+                <h2>
+                  <span className="font-semibold text-xs">
+                    {isOpen ? "Cerrar Menu" : "Ver Menu"}
+                  </span>
+                </h2>
+              </div>
+            </div>
           </div>
+
           {/* search */}
           <div className="">
             <SearchMain />
