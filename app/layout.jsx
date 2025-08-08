@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/context/ThemeProvider";
 import "./globals.css";
 import { Delius } from "next/font/google";
+import { ConvexClientProvider } from "./ConvexClientProvider";
 
 const delius = Delius({
   weight: ["400"],
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
       <html lang="es" suppressHydrationWarning className={delius.className}>
-        <body>{children}</body>
+        <body>
+          <ConvexClientProvider>{children}</ConvexClientProvider>
+        </body>
       </html>
     </ThemeProvider>
   );
