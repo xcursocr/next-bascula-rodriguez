@@ -1,5 +1,5 @@
 import { IndexHome } from "@/components/main/home";
 
-export default function HomePage() {
+export default async function HomePage() {
   return <IndexHome />;
 }

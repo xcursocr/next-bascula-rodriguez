@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/context/ThemeProvider";
 import "./globals.css";
 import { Delius } from "next/font/google";
-import { ConvexClientProvider } from "./ConvexClientProvider";
+import { ConvexClientProvider } from "@/providers/ConvexClientProvider";
 
 const delius = Delius({
   weight: ["400"],

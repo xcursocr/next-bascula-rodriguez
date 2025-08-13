@@ -1,0 +1,9 @@
+SESSION_SECRET="Wv1Rp2sT0i3rKkUja0p8BfN9lAxMnZyN3BqR/j4dQ0U="
+
+# Deployment used by `npx convex dev`
+
+CONVEX_DEPLOYMENT=dev:amicable-impala-162 # team: xcursocr, project: nextjs-database
+
+NEXT_PUBLIC_CONVEX_URL=https://amicable-impala-162.convex.cloud
+
+#crear estas variables de entorno en .env

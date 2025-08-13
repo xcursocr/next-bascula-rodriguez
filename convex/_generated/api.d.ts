@@ -13,8 +13,9 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
-import type * as categories from "../categories.js";
-import type * as sheme from "../sheme.js";
+import type * as mutations_categories from "../mutations/categories.js";
+import type * as mutations_users from "../mutations/users.js";
+import type * as queries_categories from "../queries/categories.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -25,8 +26,9 @@ import type * as sheme from "../sheme.js";
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  categories: typeof categories;
-  sheme: typeof sheme;
+  "mutations/categories": typeof mutations_categories;
+  "mutations/users": typeof mutations_users;
+  "queries/categories": typeof queries_categories;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

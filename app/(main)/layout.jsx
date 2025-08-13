@@ -1,12 +1,15 @@
 import { Footer } from "@/components/common/Footer";
 import { HeaderNav } from "@/components/common/HeaderNav";
 import { HeroLogo } from "@/components/main/home/HeroLogo";
+import { getSession } from "@/lib/getSession";
 
-export default function MainLayout({ children }) {
+export default async function MainLayout({ children }) {
+  const session = await getSession();
+
   return (
     <div>
       <header>
-        <HeaderNav />
+        <HeaderNav session={session} />
       </header>
       <div className="">
         <HeroLogo />

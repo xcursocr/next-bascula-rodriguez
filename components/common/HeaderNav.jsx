@@ -2,6 +2,8 @@
 import {
   CircleChevronDown,
   CircleChevronUp,
+  LogIn,
+  LogOut,
   Menu,
   MenuSquare,
   Search,
@@ -14,8 +16,10 @@ import { useState } from "react";
 import { FixedSearchMobil } from "./FixedSearchMobil";
 import { LogoInline } from "../ui/LogoInline";
 import useScrollPosition from "@/hooks/ScrollAction";
+import { LogoutButton } from "../auth/LogoutButton";
+import Link from "next/link";
 
-export function HeaderNav() {
+export function HeaderNav({ session }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
 
@@ -69,8 +73,24 @@ export function HeaderNav() {
                 setIsSearch((prev) => !prev);
               }}
             />
-            <User2 className="w-4 text-primary" />
+
+            {session ? (
+              <p className="hidden md:block text-sm">Hola, {session.name}</p>
+            ) : (
+              ""
+            )}
+
+            {/* <User2 className="w-4 text-primary" /> */}
             <ThemeSelect />
+
+            {session ? (
+              <LogoutButton />
+            ) : (
+              <Link href="/auth/login">
+                <User2 className="w-4 text-primary hover:text-primary/75 transition-colors transition-discrete duration-300 hover:cursor-pointer" />
+              </Link>
+            )}
+
             <Menu
               className="sm:hidden w-4 text-primary cursor-pointer"
               onClick={(e) => {

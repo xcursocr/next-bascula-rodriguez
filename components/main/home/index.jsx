@@ -10,27 +10,10 @@ import { TitleSectionV2 } from "@/components/common/TitleSectionV2";
 import { CardService } from "./CardService";
 import { CardHero } from "./CardHero";
 import { FormContact } from "./FormContact";
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
 
 export function IndexHome() {
-  const categories = useQuery(api.categories.getCategories);
-  console.log(categories?.length);
-
   return (
     <section className="">
-      <div>
-        <h3>Test para obtener categorias de ConvexDB</h3>
-        {categories?.length ? (
-          <ul>
-            {categories?.map((cat) => (
-              <li key={cat._id}>{cat.name}</li>
-            ))}
-          </ul>
-        ) : (
-          <span>No hay nada que mostrar</span>
-        )}
-      </div>
       <div className="">
         <Carousell products={allProducts} />
       </div>
